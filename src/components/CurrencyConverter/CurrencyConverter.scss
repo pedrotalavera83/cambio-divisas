@@ -1,0 +1,35 @@
+.currency-converter {
+    &__select{
+        margin-bottom: 20px;
+    }
+
+    &__button{
+        margin-bottom: 20px;
+    }
+
+    &__table{
+        margin-bottom: 20px;
+    }
+
+    .select-field{
+        margin-bottom: 20px;
+    }
+
+    .convert-button{
+        margin-bottom: 20px;
+    }
+
+    .rate-table{
+        margin-bottom: 20px;
+    }
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .error{
+        margin-bottom: 20px;
+    }
+}
