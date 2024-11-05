@@ -19,7 +19,7 @@ interface CurrencyProviderProps {
 
 export const CurrencyProvider: React.FC<CurrencyProviderProps> = ({ children }) => {
     const [currencies, setCurrencies] = useState<Record<string, any>>({});
-    const [selectedCurrency, setSelectedCurrency] = useState<string>('USD');
+    const [selectedCurrency, setSelectedCurrency] = useState<string>('MXN');
     const [selectedDate, setSelectedDate] = useState<string>(new Date().toISOString().slice(0, 10));
     const [rates, setRates] = useState<Record<string, any>>({});
 
