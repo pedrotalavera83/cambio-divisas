@@ -6,14 +6,14 @@ interface AuthState {
     user: string | null;
     role: string | null;
     error: string | null;
-}
+};
 
 const initialState: AuthState ={
     isAuthenticated: false,
     user: null,
     role: null,
     error: null,
-}
+};
 
 const authSlice = createSlice({
     name: 'auth',
@@ -22,6 +22,7 @@ const authSlice = createSlice({
         login: (state, action: PayloadAction<{ username: string; password: string }>) => {
             const { username, password } = action.payload;
             const user = users.find(u => u.username === username && u.password === password);
+            
             if (user) {
                 state.isAuthenticated = true;
                 state.user = user.username;
