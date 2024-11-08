@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { currencyURL } from '../config/env';
 
-const baseURL = 'https://api.frankfurter.app/';
+const baseURL = currencyURL;
 
 export const fetchCurrecies = async () => {
     try {
