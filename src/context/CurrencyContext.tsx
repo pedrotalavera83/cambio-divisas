@@ -9,6 +9,8 @@ export interface CurrencyContextProps {
     setSelectedDate: Dispatch<SetStateAction<string>>;
     rates: Record<string, any>;
     setRates: Dispatch<SetStateAction<Record<string, any>>>;
+    baseCurrency: string;
+    setBaseCurrency: Dispatch<SetStateAction<string>>;
 }
 
 export const CurrencyContext = createContext<CurrencyContextProps | undefined>(undefined);
@@ -22,6 +24,7 @@ export const CurrencyProvider: React.FC<CurrencyProviderProps> = ({ children }) 
     const [selectedCurrency, setSelectedCurrency] = useState<string>('MXN');
     const [selectedDate, setSelectedDate] = useState<string>(new Date().toISOString().slice(0, 10));
     const [rates, setRates] = useState<Record<string, any>>({});
+    const [baseCurrency, setBaseCurrency] = useState<string>('EUR');
 
     return (
         <CurrencyContext.Provider
@@ -33,7 +36,9 @@ export const CurrencyProvider: React.FC<CurrencyProviderProps> = ({ children }) 
                 selectedDate,
                 setSelectedDate,
                 rates,
-                setRates
+                setRates,
+                baseCurrency,
+                setBaseCurrency,
             }}
         >
             {children}
